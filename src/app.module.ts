@@ -14,6 +14,9 @@ import { APP_PIPE } from '@nestjs/core';
 // import { DatabaseModule } from './database/database.module';
 import { CommonModule } from './common/common.module';
 
+import { TerminusModule } from '@nestjs/terminus';
+import { HealthController } from './health/health.controller';
+import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [
     // Loading env variables async way
@@ -55,9 +58,11 @@ import { CommonModule } from './common/common.module';
       synchronize: true,
     }),
     CommonModule,
-    // DatabaseModule // Replace if seperate module for database with above typeorm module imports
+    // DatabaseModule // Replace if seperate module for database with above typeorm module imports,
+    HttpModule,
+    TerminusModule // For healthcheck
   ],
-  controllers: [AppController],
+  controllers: [AppController, HealthController],
   providers: [
     AppService,
     // Global validation pipe
