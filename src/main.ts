@@ -16,18 +16,19 @@ async function bootstrap() {
       transformOptions: {
         enableImplicitConversion: true,
       },
-    })
+    }),
   );
   app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(
     new WrapResponseInterceptor(),
-    new TimeoutInterceptor());
+    new TimeoutInterceptor(),
+  );
 
   const options = new DocumentBuilder()
-  .setTitle('ILuvCofffee')
-  .setDescription('Coffee application')
-  .setVersion('1.0')
-  .build();
+    .setTitle('ILuvCofffee')
+    .setDescription('Coffee application')
+    .setVersion('1.0')
+    .build();
 
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
