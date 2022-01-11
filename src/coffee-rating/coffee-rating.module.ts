@@ -5,12 +5,12 @@ import { CoffeeRatingService } from './coffee-rating.service';
 
 @Module({
   imports: [
-    DatabaseModule.register({
-      type: 'postgres',
-      host: 'localhost',
-      password: 'pass123',
-      port: 5432
-    }),
+    // DatabaseModule.register({
+    //   type: 'postgres',
+    //   host: 'localhost',
+    //   password: 'pass123',
+    //   port: 5432
+    // }),
     CoffeesModule
   ],
   providers: [CoffeeRatingService]
