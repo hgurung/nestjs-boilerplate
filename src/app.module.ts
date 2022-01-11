@@ -8,9 +8,8 @@ import { AppService } from './app.service';
 import { CoffeesModule } from './coffees/coffees.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
 import appConfig from './config/app.config';
-import { APP_PIPE } from '@nestjs/core';
+// import { APP_PIPE } from '@nestjs/core';
 // import { DatabaseModule } from './database/database.module';
 import { CommonModule } from './common/common.module';
 
@@ -55,7 +54,6 @@ import { HttpModule } from '@nestjs/axios';
       synchronize: true,
     }),
     CoffeesModule,
-    CoffeeRatingModule,
     // Without async method this should be always below config module
     CommonModule,
     // DatabaseModule // Replace if seperate module for database with above typeorm module imports,
