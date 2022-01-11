@@ -1,19 +1,15 @@
-
-import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 import { Coffee } from './coffee.entity';
 
 @Entity()
 export class Flavor {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string
+  @Column()
+  name: string;
 
-    @ManyToMany(
-        type => Coffee,
-        coffee => coffee.flavors
-    )
-    coffees: Coffee[];
+  @ManyToMany(() => Coffee, (coffee) => coffee.flavors)
+  coffees: Coffee[];
 }

@@ -5,8 +5,6 @@ import { CoffeesService } from './coffees.service';
 
 import { Flavor } from './entities/flavor.entity';
 import { Coffee } from './entities/coffee.entity';
-import { COFFEE_BRANDS } from './coffees.constants';
-import { ConfigService } from '@nestjs/config';
 
 describe('CoffeesService', () => {
   let service: CoffeesService;
@@ -16,15 +14,18 @@ describe('CoffeesService', () => {
       providers: [
         CoffeesService,
         {
-          provide: Connection, useValue: {}
+          provide: Connection,
+          useValue: {},
         },
         {
-          provide: getRepositoryToken(Flavor), useValue: {}
+          provide: getRepositoryToken(Flavor),
+          useValue: {},
         },
         {
-          provide: getRepositoryToken(Coffee), useValue: {}
+          provide: getRepositoryToken(Coffee),
+          useValue: {},
         },
-    ],
+      ],
     }).compile();
 
     service = module.get<CoffeesService>(CoffeesService);

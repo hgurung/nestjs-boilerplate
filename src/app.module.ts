@@ -1,6 +1,6 @@
 import * as Joi from 'joi';
 
-import { Module, ValidationPipe } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
 import { AppController } from './app.controller';
@@ -58,7 +58,7 @@ import { HttpModule } from '@nestjs/axios';
     CommonModule,
     // DatabaseModule // Replace if seperate module for database with above typeorm module imports,
     HttpModule,
-    TerminusModule // For healthcheck
+    TerminusModule, // For healthcheck
   ],
   controllers: [AppController, HealthController],
   providers: [
