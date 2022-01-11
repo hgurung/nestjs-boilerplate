@@ -19,6 +19,18 @@ import { HealthController } from './health/health.controller';
 import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [
+    ConfigModule.forRoot({
+      // ignoreEnvFile: true, // For heroku or some services which dont need env
+      // envFilePath: '.environment', // For chaging environment file path
+      validationSchema: Joi.object({
+        DATABASE_HOST: Joi.required(),
+        DATABASE_USER: Joi.required(),
+        DATABASE_PASSWORD: Joi.required(),
+        DATABASE_NAME: Joi.required(),
+        DATABASE_PORT: Joi.number().default(5432),
+      }),
+      load: [appConfig],
+    }),
     // Loading env variables async way
     // TypeOrmModule.forRootAsync({
     //   useFactory: () => ({
@@ -32,21 +44,6 @@ import { HttpModule } from '@nestjs/axios';
     //     synchronize: true,
     //   })
     // }),
-    ConfigModule.forRoot({
-      // ignoreEnvFile: true, // For heroku or some services which dont need env
-      // envFilePath: '.environment', // For chaging environment file path
-      validationSchema: Joi.object({
-        DATABASE_HOST: Joi.required(),
-        DATABASE_USER: Joi.required(),
-        DATABASE_PASSWORD: Joi.required(),
-        DATABASE_NAME: Joi.required(),
-        DATABASE_PORT: Joi.number().default(5432),
-      }),
-      load: [appConfig],
-    }),
-    CoffeesModule,
-    CoffeeRatingModule,
-    // Without async method this should be always below config module
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DATABASE_HOST,
@@ -57,6 +54,9 @@ import { HttpModule } from '@nestjs/axios';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    CoffeesModule,
+    CoffeeRatingModule,
+    // Without async method this should be always below config module
     CommonModule,
     // DatabaseModule // Replace if seperate module for database with above typeorm module imports,
     HttpModule,

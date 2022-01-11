@@ -44,7 +44,7 @@ export class CoffeesService {
 
     async findAll(paginationQuery: PaginationQueryDto) {
 
-        await new Promise(resolve => setTimeout(resolve, 5000));
+        await new Promise(resolve => setTimeout(resolve, 3000));
 
         const { offset,limit} = paginationQuery;
         return await this.coffeeRepository.find({
