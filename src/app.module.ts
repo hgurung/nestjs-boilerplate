@@ -20,18 +20,18 @@ import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [
     // Loading env variables async way
-    TypeOrmModule.forRootAsync({
-      useFactory: () => ({
-        type: 'postgres',
-        host: process.env.DATABASE_HOST,
-        port: +process.env.DATABASE_PORT,
-        username: process.env.DATABASE_USER,
-        password: process.env.DATABASE_PASSWORD,
-        database: process.env.DATABASE_NAME,
-        autoLoadEntities: true,
-        synchronize: true,
-      })
-    }),
+    // TypeOrmModule.forRootAsync({
+    //   useFactory: () => ({
+    //     type: 'postgres',
+    //     host: process.env.DATABASE_HOST,
+    //     port: +process.env.DATABASE_PORT,
+    //     username: process.env.DATABASE_USER,
+    //     password: process.env.DATABASE_PASSWORD,
+    //     database: process.env.DATABASE_NAME,
+    //     autoLoadEntities: true,
+    //     synchronize: true,
+    //   })
+    // }),
     ConfigModule.forRoot({
       // ignoreEnvFile: true, // For heroku or some services which dont need env
       // envFilePath: '.environment', // For chaging environment file path
