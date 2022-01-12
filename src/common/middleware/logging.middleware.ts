@@ -4,8 +4,8 @@ import { Injectable, NestMiddleware } from '@nestjs/common';
 export class LoggingMiddleware implements NestMiddleware {
   use(req: any, res: any, next: () => void) {
     console.time('Request-response time');
-    console.log('Hello from middleware');
-    res.on('finish', () => console.timeEnd('Request-response time'));
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+    res.on('finish', (): void => console.timeEnd('Request-response time'));
     next();
   }
 }
