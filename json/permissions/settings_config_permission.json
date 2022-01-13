@@ -1,0 +1,274 @@
+[
+    {
+        "__comments": "Main module is settings along with default access values.",
+        "module": "settings",
+        "access": [
+            {
+                "name": "No Access",
+                "slug": "no_access"
+            },
+            {
+                "name": "View and Interact",
+                "slug": "view_interact"
+            },
+            {
+                "name": "Create & Edit",
+                "slug": "create_edit"
+            },
+            {
+                "name": "Create, Edit, Delete",
+                "slug": "create_edit_delete"
+            }
+        ],
+        "submodules": [
+            {
+                "name": "Account Settings",
+                "slug": "settings.account",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.account.no_access",
+                        "default": 1
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.account.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.account.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.account.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Shared Inbox Settings",
+                "slug": "settings.shared_inbox",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.shared_inbox.no_access",
+                        "default": 1
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.shared_inbox.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.shared_inbox.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.shared_inbox.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "User's Inbox Settings",
+                "slug": "settings.users_inbox",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.users_inbox.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.users_inbox.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.users_inbox.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.users_inbox.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Knowledge Bases",
+                "slug": "settings.knowledge_bases",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.knowledge_bases.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.knowledge_bases.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.knowledge_bases.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.knowledge_bases.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Automations",
+                "slug": "settings.automations",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.automations.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.automations.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.automations.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.automations.create_edit_delete",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Review Settings",
+                "slug": "settings.review",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.review.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.review.view_interact",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.review.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.review.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "User's Own Settings",
+                "slug": "settings.users_own",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.users_own.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.users_own.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.users_own.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.users_own.create_edit_delete",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "User API Access",
+                "slug": "settings.user_api_access",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.user_api_access.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.user_api_access.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.user_api_access.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Export User's Data",
+                "slug": "settings.export_users_data",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "settings.export_users_data.no_access",
+                        "default": 1
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "settings.export_users_data.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "settings.export_users_data.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "settings.export_users_data.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            }
+        ]
+
+    }
+  ]

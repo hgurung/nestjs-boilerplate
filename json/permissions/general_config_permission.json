@@ -1,0 +1,379 @@
+[
+    {
+        "__comments": "Main module is general along with default access values.",
+        "module": "general",
+        "access": [
+            {
+                "name": "No Access",
+                "slug": "no_access"
+            },
+            {
+                "name": "View and Interact",
+                "slug": "view_interact"
+            },
+            {
+                "name": "Create & Edit",
+                "slug": "create_edit"
+            },
+            {
+                "name": "Create, Edit, Delete",
+                "slug": "create_edit_delete"
+            }
+        ],
+        "submodules": [
+            {
+                "name": "Inboxes",
+                "slug": "inboxes",
+                "isDynamic": false,
+                "nested": [
+                    {
+                        "name":  "All Inboxes",
+                        "slug": "inboxes.all"
+                    },
+                    {
+                        "name": "Shared & user's inboxes",
+                        "slug": "inboxes.shared_user"
+                    },
+                    {        
+                        "name": "User's inboxes only",
+                        "slug": "inboxes.user"
+                    }
+                ],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "inboxes.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "inboxes.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Team Chat Channels",
+                "slug": "team_chat_channels",
+                "isDynamic": true,    
+                "nested": [
+                    {
+                        "name":  "All Channels",
+                        "slug": "team_chat_channels.all"
+                    }  
+                ],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "team_chat_channels.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "team_chat_channels.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Pipelines",
+                "slug": "pipelines",
+                "isDynamic": true,    
+                "nested": [
+                    {
+                        "name":  "All pipelines",
+                        "slug": "pipelines.all"
+                    }  
+                ],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "pipelines.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "pipelines.view_interact",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "pipelines.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "pipelines.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Deals",
+                "slug": "deals",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "deals.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "deals.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "deals.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "deals.create_edit_delete",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Activities",
+                "slug": "activities",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "activities.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "activities.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "activities.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "activities.create_edit_delete",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Contacts",
+                "slug": "contacts",
+                "isDynamic": false,
+                "nested": [
+                    {
+                        "name":  "All contacts",
+                        "slug": "contacts.all"
+                    },
+                    {
+                        "name":  "User's & followed contacts",
+                        "slug": "contacts.users_followed_contacts"
+                    },
+                    {
+                        "name":  "Name/org/contact info of non-followed",
+                        "slug": "contacts.non_followed_contacts"
+                    }
+                ],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "contacts.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "contacts.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "contacts.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "contacts.create_edit_delete",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Quotes & Invoices",
+                "slug": "quotes_invoices",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "quotes_invoices.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "quotes_invoices.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "quotes_invoices.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "quotes_invoices.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Products & Services",
+                "slug": "products_services",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "products_services.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "products_services.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "products_services.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "products_services.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Campaigns",
+                "slug": "campaigns",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "campaigns.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "campaigns.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "campaigns.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "campaigns.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Surveys",
+                "slug": "surveys",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "surveys.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "surveys.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "surveys.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "surveys.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Forms",
+                "slug": "forms",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "forms.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "forms.view_interact",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "forms.create_edit",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "forms.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            },
+            {
+                "name": "Review Profiles",
+                "slug": "review_profiles",
+                "isDynamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "review_profiles.no_access",
+                        "default": 0
+                    },
+                    {  
+                        "slug": "view_interact",
+                        "value": "review_profiles.view_interact",
+                        "default": 1
+                    },
+                    {
+                        "slug": "create_edit",
+                        "value": "review_profiles.create_edit",
+                        "default": 0
+                    },
+                    {
+                        "slug": "create_edit_delete",
+                        "value": "review_profiles.create_edit_delete",
+                        "default": 0
+                    }
+                ] 
+            }
+        ]
+
+    }
+  ]
