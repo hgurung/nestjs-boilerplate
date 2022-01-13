@@ -1,0 +1,271 @@
+[
+    {
+        "__comments": "Main module is reports along with default access values.",
+        "module": "reports",
+        "access": [
+            {
+                "name": "No Access",
+                "slug": "no_access"
+            },
+            {
+                "name": "View and Interact",
+                "slug": "view_interact"
+            }
+        ],
+        "submodules": [ 
+            {
+                "name": "Sales",
+                "slug": "reports.sales",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.sales.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.sales.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Losses",
+                "slug": "reports.losses",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.losses.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.losses.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "New Deals",
+                "slug": "reports.new_deals",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.new_deals.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.new_deals.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Pipeline Size",
+                "slug": "reports.pipeline_size",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.pipeline_size.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.pipeline_size.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Forecast",
+                "slug": "reports.forecast",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.forecast.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.forecast.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Funnel Analysis",
+                "slug": "reports.funnel_analysis",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.funnel_analysis.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.funnel_analysis.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Activity",
+                "slug": "reports.activity",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.activity.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.activity.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Insights",
+                "slug": "reports.insights",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.insights.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.insights.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Campaigns",
+                "slug": "reports.campaigns",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.campaigns.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.campaigns.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Surveys",
+                "slug": "reports.surveys",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.surveys.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.surveys.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Reviews",
+                "slug": "reports.reviews",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.reviews.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.reviews.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Sentiment",
+                "slug": "reports.sentiment",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.sentiment.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.sentiment.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Conversations",
+                "slug": "reports.conversations",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.conversations.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.conversations.view_interact",
+                        "default": 1
+                    }
+                ] 
+            },
+            {
+                "name": "Knowledge Bases",
+                "slug": "reports.knowledge_bases",
+                "isDyanamic": false,
+                "nested": [],
+                "access": [
+                    {
+                        "slug": "no_access",
+                        "value": "reports.knowledge_bases.no_access",
+                        "default": 0
+                    },
+                    {
+                        "slug": "view_interact",
+                        "value": "reports.knowledge_bases.view_interact",
+                        "default": 1
+                    }
+                ] 
+            }
+        ]
+
+    }
+  ]
