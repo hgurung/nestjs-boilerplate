@@ -7,6 +7,7 @@ import {
   Delete,
   Body,
   Query,
+  UseGuards
   // UsePipes,
   // ValidationPipe,
   // SetMetadata,
@@ -21,6 +22,10 @@ import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 
+// Protection via auth jwt strategy
+import { AuthGuard } from '@nestjs/passport';
+
+
 // Controller based pipes
 // @UsePipes(ValidationPipe)
 @ApiTags('coffees')
@@ -29,7 +34,7 @@ export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
   // @UsePipes(ValidationPipe) // Method based pipe
-  @ApiForbiddenResponse({ description: 'Forbidden.' })
+  @ApiForbiddenResponse({ description: 'Forbidden ok.' })
   @Public() // Custom decorator created for public api routes
   @Get()
   findAll(
@@ -40,6 +45,7 @@ export class CoffeesController {
     return this.coffeesService.findAll(paginationQuery);
   }
 
+  @UseGuards(AuthGuard('jwt'))
   @Get(':id')
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.coffeesService.findOne(id);
