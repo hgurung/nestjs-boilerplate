@@ -9,6 +9,8 @@ import { CoffeesModule } from './coffees/coffees.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import appConfig from './config/app.config';
+import authConfig from './config/auth.config';
+import databaseConfig from './config/database.config';
 // import { APP_PIPE } from '@nestjs/core';
 // import { DatabaseModule } from './database/database.module';
 import { CommonModule } from './common/common.module';
@@ -16,6 +18,7 @@ import { CommonModule } from './common/common.module';
 import { TerminusModule } from '@nestjs/terminus';
 import { HealthController } from './health/health.controller';
 import { HttpModule } from '@nestjs/axios';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -28,7 +31,7 @@ import { HttpModule } from '@nestjs/axios';
         DATABASE_NAME: Joi.required(),
         DATABASE_PORT: Joi.number().default(5432),
       }),
-      load: [appConfig],
+      load: [appConfig, authConfig, databaseConfig],
     }),
     // Loading env variables async way
     // TypeOrmModule.forRootAsync({
@@ -59,6 +62,7 @@ import { HttpModule } from '@nestjs/axios';
     // DatabaseModule // Replace if seperate module for database with above typeorm module imports,
     HttpModule,
     TerminusModule, // For healthcheck
+    AuthModule,
   ],
   controllers: [AppController, HealthController],
   providers: [
