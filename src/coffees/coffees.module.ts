@@ -24,7 +24,6 @@ import coffeesConfig from './config/coffees.config';
     {
       provide: COFFEE_BRANDS,
       useFactory: async (connection: Connection): Promise<string[]> => {
-        console.log('Coffee brands', connection);
         const coffeeBrands = await Promise.resolve(['buddy brew', 'newscafe']);
         return coffeeBrands;
       },
